@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -13,6 +14,8 @@ body {
   padding: 0;
   line-height: 1.5;
   background: #181a1b;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body .noscroll {
@@ -47,10 +50,11 @@ a {
 
 .container {
   max-width: 1200px;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem;
   margin: auto;
   overflow: hidden;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .text-blue {
@@ -499,13 +503,12 @@ header .hero p {
 
 header .hero h1 {
   letter-spacing: 2px;
-  white-space: nowrap;
+  white-space: normal;
   text-align: center;
   font-size: clamp(2rem, 5vw, 4rem);
   font-family: "Alfa Slab One", "Poppins";
   font-weight: 400;
-  font-family: "Alfa Slab One", "Poppins";
-  font-weight: 400;
+  padding: 0 1rem;
 }
 
 header .hero p {
@@ -662,17 +665,26 @@ header .seperator-skew svg .fill-white {
 }
 
 @media screen and (max-width: 500px) {
+  .container {
+    padding: 1rem;
+  }
+  
   header nav .nav-container #logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-  header nav .mobile-menu .container .mobile-menu-links ul li {
-    margin: 0 0.5rem;
+  
+  header .hero {
+    padding: 0 1rem;
   }
-  header .hero span {
-    max-width: 100%;
-  }
-  header .hero p {
+  
+  .project-left {
+    margin: 0;
+    padding: 0;
     width: 100%;
+  }
+  
+  .project-right {
+    padding: 1rem;
   }
 }
 
